@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import fetadifyLogo from "@/assets/fetadify-logo.png";
+import fetadifyLogo from "@/assets/fetadify-logo.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/message/fetadify";
 
@@ -27,7 +27,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="text-xl font-bold tracking-tight text-foreground">
           <span className="flex items-center gap-2">
-            <img src={fetadifyLogo} alt="Fetadify" className="h-8 w-8" />
+            <img src={fetadifyLogo} alt="Fetadify" className="h-8 w-auto invert" />
             <span className="text-gradient">Fetadify</span>
             <span className="text-muted-foreground font-normal text-sm">Agency</span>
           </span>

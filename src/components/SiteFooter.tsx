@@ -1,4 +1,4 @@
-import fetadifyLogo from "@/assets/fetadify-logo.png";
+import fetadifyLogo from "@/assets/fetadify-logo.jpg";
 
 export function SiteFooter() {
   const WHATSAPP_LINK = "https://wa.me/message/fetadify";
@@ -10,7 +10,7 @@ export function SiteFooter() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <img src={fetadifyLogo} alt="Fetadify" className="h-8 w-8" />
+              <img src={fetadifyLogo} alt="Fetadify" className="h-8 w-auto invert" />
               <span className="text-xl font-bold text-gradient">Fetadify</span>
               <span className="text-muted-foreground text-sm">Agency</span>
             </div>
