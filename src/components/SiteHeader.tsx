@@ -7,8 +7,9 @@ const WHATSAPP_LINK = "https://wa.me/message/fetadify";
 
 const navLinks = [
   { label: "Services", to: "/" as const, hash: "#services" },
+  { label: "Portfolio", to: "/" as const, hash: "#portfolio" },
+  { label: "Blog", to: "/" as const, hash: "#blog" },
   { label: "About", to: "/" as const, hash: "#about" },
-  { label: "Process", to: "/" as const, hash: "#process" },
   { label: "Contact", to: "/contact" as const },
 ];
 
