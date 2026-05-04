@@ -43,6 +43,14 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
