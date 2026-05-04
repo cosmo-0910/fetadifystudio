@@ -16,7 +16,7 @@ export function HeroSection() {
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-hero-overlay" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/30" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <p className="animate-fade-up text-sm font-semibold uppercase tracking-widest text-primary mb-4">
