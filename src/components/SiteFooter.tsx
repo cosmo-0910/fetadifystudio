@@ -1,3 +1,5 @@
+import fetadifyLogo from "@/assets/fetadify-logo.png";
+
 export function SiteFooter() {
   const WHATSAPP_LINK = "https://wa.me/message/fetadify";
 
@@ -7,8 +9,11 @@ export function SiteFooter() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <span className="text-xl font-bold text-gradient">Fetadify</span>
-            <span className="ml-1 text-muted-foreground text-sm">Agency</span>
+            <div className="flex items-center gap-2">
+              <img src={fetadifyLogo} alt="Fetadify" className="h-8 w-8" />
+              <span className="text-xl font-bold text-gradient">Fetadify</span>
+              <span className="text-muted-foreground text-sm">Agency</span>
+            </div>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xs">
               Custom software, mobile apps, AR/VR, and product design — we build digital solutions that drive real business results.
             </p>
