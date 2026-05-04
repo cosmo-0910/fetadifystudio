@@ -8,6 +8,8 @@ import { ProcessSection } from "@/components/ProcessSection";
 import { TechStackSection } from "@/components/TechStackSection";
 import { CtaSection } from "@/components/CtaSection";
 import { SiteFooter } from "@/components/SiteFooter";
+import { PortfolioSection } from "@/components/PortfolioSection";
+import { BlogSection } from "@/components/BlogSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,9 +30,11 @@ function HomePage() {
       <HeroSection />
       <StatsSection />
       <ServicesSection />
+      <PortfolioSection />
       <WhyUsSection />
       <ProcessSection />
       <TechStackSection />
+      <BlogSection />
       <CtaSection />
       <SiteFooter />
     </div>
