@@ -5,7 +5,7 @@ const blogPosts = [
     title: "React Native vs Flutter in 2026: Which Should You Choose?",
     excerpt:
       "A detailed comparison of the two leading cross-platform frameworks, covering performance, developer experience, and ecosystem maturity.",
-    readTime: "8 min read",
+    readTime: "6 min read",
   },
   {
     date: "Apr 16, 2026",
