@@ -58,7 +58,6 @@ export function ServicesSection() {
     <Link
       key={service.title}
       to={`/services/${slug}`}
-      params={{ slug }}
       className="block"
     >
       <div className="glass glow-border rounded-xl p-8 hover:scale-[1.02] transition-transform duration-300 group">
