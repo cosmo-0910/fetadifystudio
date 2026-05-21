@@ -359,7 +359,7 @@ function ContactPage() {
                     </div>
                     <div>
                       <span className="block text-xs font-semibold text-muted-foreground group-hover:text-foreground">Call our US Office</span>
-                      <span className="block text-sm font-bold text-primary">+1 (800) 555-0199</span>
+                      <span className="block text-sm font-bold text-primary">+44 7828 838904</span>
                     </div>
                   </a>
                 </div>
