@@ -9,7 +9,6 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CareersRouteImport } from './routes/careers'
@@ -20,13 +19,7 @@ import { Route as ServicesEmergingTechAiRouteImport } from './routes/services/em
 import { Route as ServicesCustomSoftwareSaasRouteImport } from './routes/services/custom-software-saas'
 import { Route as ServicesCloudDevopsRouteImport } from './routes/services/cloud-devops'
 import { Route as ServicesBlockchainWeb3RouteImport } from './routes/services/blockchain-web3'
-import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
@@ -79,19 +72,12 @@ const ServicesBlockchainWeb3Route = ServicesBlockchainWeb3RouteImport.update({
   path: '/blockchain-web3',
   getParentRoute: () => ServicesRoute,
 } as any)
-const ServicesSlugRoute = ServicesSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ServicesRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
-  '/services': typeof ServicesRouteWithChildren
-  '/services/$slug': typeof ServicesSlugRoute
   '/services/blockchain-web3': typeof ServicesBlockchainWeb3Route
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/custom-software-saas': typeof ServicesCustomSoftwareSaasRoute
@@ -104,8 +90,6 @@ export interface FileRoutesByTo {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
-  '/services': typeof ServicesRouteWithChildren
-  '/services/$slug': typeof ServicesSlugRoute
   '/services/blockchain-web3': typeof ServicesBlockchainWeb3Route
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/custom-software-saas': typeof ServicesCustomSoftwareSaasRoute
@@ -119,8 +103,6 @@ export interface FileRoutesById {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
-  '/services': typeof ServicesRouteWithChildren
-  '/services/$slug': typeof ServicesSlugRoute
   '/services/blockchain-web3': typeof ServicesBlockchainWeb3Route
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/custom-software-saas': typeof ServicesCustomSoftwareSaasRoute
@@ -135,8 +117,6 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/portfolio'
-    | '/services'
-    | '/services/$slug'
     | '/services/blockchain-web3'
     | '/services/cloud-devops'
     | '/services/custom-software-saas'
@@ -149,8 +129,6 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/portfolio'
-    | '/services'
-    | '/services/$slug'
     | '/services/blockchain-web3'
     | '/services/cloud-devops'
     | '/services/custom-software-saas'
@@ -163,8 +141,6 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/portfolio'
-    | '/services'
-    | '/services/$slug'
     | '/services/blockchain-web3'
     | '/services/cloud-devops'
     | '/services/custom-software-saas'
@@ -178,18 +154,10 @@ export interface RootRouteChildren {
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
   PortfolioRoute: typeof PortfolioRoute
-  ServicesRoute: typeof ServicesRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/portfolio': {
       id: '/portfolio'
       path: '/portfolio'
@@ -260,46 +228,14 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesBlockchainWeb3RouteImport
       parentRoute: typeof ServicesRoute
     }
-    '/services/$slug': {
-      id: '/services/$slug'
-      path: '/$slug'
-      fullPath: '/services/$slug'
-      preLoaderRoute: typeof ServicesSlugRouteImport
-      parentRoute: typeof ServicesRoute
-    }
   }
 }
-
-interface ServicesRouteChildren {
-  ServicesSlugRoute: typeof ServicesSlugRoute
-  ServicesBlockchainWeb3Route: typeof ServicesBlockchainWeb3Route
-  ServicesCloudDevopsRoute: typeof ServicesCloudDevopsRoute
-  ServicesCustomSoftwareSaasRoute: typeof ServicesCustomSoftwareSaasRoute
-  ServicesEmergingTechAiRoute: typeof ServicesEmergingTechAiRoute
-  ServicesImmersiveVrarmrRoute: typeof ServicesImmersiveVrarmrRoute
-  ServicesUiUxWeb3MarketingRoute: typeof ServicesUiUxWeb3MarketingRoute
-}
-
-const ServicesRouteChildren: ServicesRouteChildren = {
-  ServicesSlugRoute: ServicesSlugRoute,
-  ServicesBlockchainWeb3Route: ServicesBlockchainWeb3Route,
-  ServicesCloudDevopsRoute: ServicesCloudDevopsRoute,
-  ServicesCustomSoftwareSaasRoute: ServicesCustomSoftwareSaasRoute,
-  ServicesEmergingTechAiRoute: ServicesEmergingTechAiRoute,
-  ServicesImmersiveVrarmrRoute: ServicesImmersiveVrarmrRoute,
-  ServicesUiUxWeb3MarketingRoute: ServicesUiUxWeb3MarketingRoute,
-}
-
-const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
-  ServicesRouteChildren,
-)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
   PortfolioRoute: PortfolioRoute,
-  ServicesRoute: ServicesRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
