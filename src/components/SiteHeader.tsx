@@ -7,7 +7,7 @@ const WHATSAPP_LINK = "https://wa.me/447828838904";
 
 const navLinks = [
   { label: "Home", to: "/" as const },
-  { label: "Services", to: "/services" as const },
+  { label: "Services", to: "/services.html" as const },
   { label: "Portfolio", to: "/portfolio" as const },
   { label: "Contact", to: "/contact" as const },
 ];
