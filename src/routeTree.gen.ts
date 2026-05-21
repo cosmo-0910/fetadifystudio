@@ -14,6 +14,12 @@ import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesUiUxWeb3MarketingRouteImport } from './routes/services/ui-ux-web3-marketing'
+import { Route as ServicesImmersiveVrarmrRouteImport } from './routes/services/immersive-vrarmr'
+import { Route as ServicesEmergingTechAiRouteImport } from './routes/services/emerging-tech-ai'
+import { Route as ServicesCustomSoftwareSaasRouteImport } from './routes/services/custom-software-saas'
+import { Route as ServicesCloudDevopsRouteImport } from './routes/services/cloud-devops'
+import { Route as ServicesBlockchainWeb3RouteImport } from './routes/services/blockchain-web3'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
 const ServicesRoute = ServicesRouteImport.update({
@@ -41,6 +47,38 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesUiUxWeb3MarketingRoute =
+  ServicesUiUxWeb3MarketingRouteImport.update({
+    id: '/ui-ux-web3-marketing',
+    path: '/ui-ux-web3-marketing',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesImmersiveVrarmrRoute = ServicesImmersiveVrarmrRouteImport.update({
+  id: '/immersive-vrarmr',
+  path: '/immersive-vrarmr',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesEmergingTechAiRoute = ServicesEmergingTechAiRouteImport.update({
+  id: '/emerging-tech-ai',
+  path: '/emerging-tech-ai',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesCustomSoftwareSaasRoute =
+  ServicesCustomSoftwareSaasRouteImport.update({
+    id: '/custom-software-saas',
+    path: '/custom-software-saas',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesCloudDevopsRoute = ServicesCloudDevopsRouteImport.update({
+  id: '/cloud-devops',
+  path: '/cloud-devops',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesBlockchainWeb3Route = ServicesBlockchainWeb3RouteImport.update({
+  id: '/blockchain-web3',
+  path: '/blockchain-web3',
+  getParentRoute: () => ServicesRoute,
+} as any)
 const ServicesSlugRoute = ServicesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -54,6 +92,12 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/services': typeof ServicesRouteWithChildren
   '/services/$slug': typeof ServicesSlugRoute
+  '/services/blockchain-web3': typeof ServicesBlockchainWeb3Route
+  '/services/cloud-devops': typeof ServicesCloudDevopsRoute
+  '/services/custom-software-saas': typeof ServicesCustomSoftwareSaasRoute
+  '/services/emerging-tech-ai': typeof ServicesEmergingTechAiRoute
+  '/services/immersive-vrarmr': typeof ServicesImmersiveVrarmrRoute
+  '/services/ui-ux-web3-marketing': typeof ServicesUiUxWeb3MarketingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +106,12 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/services': typeof ServicesRouteWithChildren
   '/services/$slug': typeof ServicesSlugRoute
+  '/services/blockchain-web3': typeof ServicesBlockchainWeb3Route
+  '/services/cloud-devops': typeof ServicesCloudDevopsRoute
+  '/services/custom-software-saas': typeof ServicesCustomSoftwareSaasRoute
+  '/services/emerging-tech-ai': typeof ServicesEmergingTechAiRoute
+  '/services/immersive-vrarmr': typeof ServicesImmersiveVrarmrRoute
+  '/services/ui-ux-web3-marketing': typeof ServicesUiUxWeb3MarketingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +121,12 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/services': typeof ServicesRouteWithChildren
   '/services/$slug': typeof ServicesSlugRoute
+  '/services/blockchain-web3': typeof ServicesBlockchainWeb3Route
+  '/services/cloud-devops': typeof ServicesCloudDevopsRoute
+  '/services/custom-software-saas': typeof ServicesCustomSoftwareSaasRoute
+  '/services/emerging-tech-ai': typeof ServicesEmergingTechAiRoute
+  '/services/immersive-vrarmr': typeof ServicesImmersiveVrarmrRoute
+  '/services/ui-ux-web3-marketing': typeof ServicesUiUxWeb3MarketingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +137,12 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/services'
     | '/services/$slug'
+    | '/services/blockchain-web3'
+    | '/services/cloud-devops'
+    | '/services/custom-software-saas'
+    | '/services/emerging-tech-ai'
+    | '/services/immersive-vrarmr'
+    | '/services/ui-ux-web3-marketing'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +151,12 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/services'
     | '/services/$slug'
+    | '/services/blockchain-web3'
+    | '/services/cloud-devops'
+    | '/services/custom-software-saas'
+    | '/services/emerging-tech-ai'
+    | '/services/immersive-vrarmr'
+    | '/services/ui-ux-web3-marketing'
   id:
     | '__root__'
     | '/'
@@ -97,6 +165,12 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/services'
     | '/services/$slug'
+    | '/services/blockchain-web3'
+    | '/services/cloud-devops'
+    | '/services/custom-software-saas'
+    | '/services/emerging-tech-ai'
+    | '/services/immersive-vrarmr'
+    | '/services/ui-ux-web3-marketing'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -144,6 +218,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/ui-ux-web3-marketing': {
+      id: '/services/ui-ux-web3-marketing'
+      path: '/ui-ux-web3-marketing'
+      fullPath: '/services/ui-ux-web3-marketing'
+      preLoaderRoute: typeof ServicesUiUxWeb3MarketingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/immersive-vrarmr': {
+      id: '/services/immersive-vrarmr'
+      path: '/immersive-vrarmr'
+      fullPath: '/services/immersive-vrarmr'
+      preLoaderRoute: typeof ServicesImmersiveVrarmrRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/emerging-tech-ai': {
+      id: '/services/emerging-tech-ai'
+      path: '/emerging-tech-ai'
+      fullPath: '/services/emerging-tech-ai'
+      preLoaderRoute: typeof ServicesEmergingTechAiRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/custom-software-saas': {
+      id: '/services/custom-software-saas'
+      path: '/custom-software-saas'
+      fullPath: '/services/custom-software-saas'
+      preLoaderRoute: typeof ServicesCustomSoftwareSaasRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/cloud-devops': {
+      id: '/services/cloud-devops'
+      path: '/cloud-devops'
+      fullPath: '/services/cloud-devops'
+      preLoaderRoute: typeof ServicesCloudDevopsRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/blockchain-web3': {
+      id: '/services/blockchain-web3'
+      path: '/blockchain-web3'
+      fullPath: '/services/blockchain-web3'
+      preLoaderRoute: typeof ServicesBlockchainWeb3RouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/$slug': {
       id: '/services/$slug'
       path: '/$slug'
@@ -156,10 +272,22 @@ declare module '@tanstack/react-router' {
 
 interface ServicesRouteChildren {
   ServicesSlugRoute: typeof ServicesSlugRoute
+  ServicesBlockchainWeb3Route: typeof ServicesBlockchainWeb3Route
+  ServicesCloudDevopsRoute: typeof ServicesCloudDevopsRoute
+  ServicesCustomSoftwareSaasRoute: typeof ServicesCustomSoftwareSaasRoute
+  ServicesEmergingTechAiRoute: typeof ServicesEmergingTechAiRoute
+  ServicesImmersiveVrarmrRoute: typeof ServicesImmersiveVrarmrRoute
+  ServicesUiUxWeb3MarketingRoute: typeof ServicesUiUxWeb3MarketingRoute
 }
 
 const ServicesRouteChildren: ServicesRouteChildren = {
   ServicesSlugRoute: ServicesSlugRoute,
+  ServicesBlockchainWeb3Route: ServicesBlockchainWeb3Route,
+  ServicesCloudDevopsRoute: ServicesCloudDevopsRoute,
+  ServicesCustomSoftwareSaasRoute: ServicesCustomSoftwareSaasRoute,
+  ServicesEmergingTechAiRoute: ServicesEmergingTechAiRoute,
+  ServicesImmersiveVrarmrRoute: ServicesImmersiveVrarmrRoute,
+  ServicesUiUxWeb3MarketingRoute: ServicesUiUxWeb3MarketingRoute,
 }
 
 const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
