@@ -66,6 +66,7 @@
     "vite-tsconfig-paths": "^6.0.2",
     "zod": "^3.24.2"
     "@supabase/supabase-js": "^2.45.0",
+  "marked": "^5.1.0",
 },
   "devDependencies": {
     "@eslint/js": "^9.32.0",

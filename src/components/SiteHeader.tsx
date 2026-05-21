@@ -3,13 +3,12 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import fetadifyLogo from "@/assets/fetadify-logo.jpg";
 
-const WHATSAPP_LINK = "https://wa.me/message/fetadify";
+const WHATSAPP_LINK = "https://wa.me/447828838904";
 
 const navLinks = [
   { label: "Home", to: "/" as const },
   { label: "Services", to: "/services" as const },
   { label: "Portfolio", to: "/portfolio" as const },
-  { label: "Careers", to: "/careers" as const },
   { label: "Contact", to: "/contact" as const },
 ];
 

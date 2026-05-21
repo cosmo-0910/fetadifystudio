@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import fetadifyLogo from "@/assets/fetadify-logo.jpg";
 
 export function SiteFooter() {
-  const WHATSAPP_LINK = "https://wa.me/message/fetadify";
+  const WHATSAPP_LINK = "https://wa.me/447828838904";
 
   return (
     <footer className="border-t border-border py-16 px-6 bg-background">
@@ -54,9 +54,6 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link to="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link>
-              </li>
-              <li>
-                <Link to="/careers" className="hover:text-primary transition-colors">Careers</Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
