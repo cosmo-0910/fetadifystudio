@@ -57,7 +57,7 @@ export function ServicesSection() {
   return (
     <Link
       key={service.title}
-      to="/services/$slug"
+      to={`/services/${slug}`}
       params={{ slug }}
       className="block"
     >
