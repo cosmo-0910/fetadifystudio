@@ -6,10 +6,10 @@ import fetadifyLogo from "@/assets/fetadify-logo.jpg";
 const WHATSAPP_LINK = "https://wa.me/message/fetadify";
 
 const navLinks = [
-  { label: "Services", to: "/" as const, hash: "#services" },
-  { label: "Portfolio", to: "/" as const, hash: "#portfolio" },
-  { label: "Blog", to: "/" as const, hash: "#blog" },
-  { label: "About", to: "/" as const, hash: "#about" },
+  { label: "Home", to: "/" as const },
+  { label: "Services", to: "/services" as const },
+  { label: "Portfolio", to: "/portfolio" as const },
+  { label: "Careers", to: "/careers" as const },
   { label: "Contact", to: "/contact" as const },
 ];
 

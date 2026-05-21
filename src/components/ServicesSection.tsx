@@ -1,39 +1,39 @@
 const services = [
   {
-    icon: "💻",
-    title: "Custom Software Development",
+    icon: "🤖",
+    title: "Emerging Tech & AI",
     description:
-      "We build tailor-made software solutions that streamline your operations, integrate with your existing systems, and scale with your business growth.",
+      "Smart automation, machine learning models, neural networks, natural language processing, and AI integrations that drive operational intelligence and product innovation.",
   },
   {
-    icon: "📱",
-    title: "Mobile App Development",
+    icon: "⛓️",
+    title: "Blockchain & Web3",
     description:
-      "Native iOS, Android, and cross-platform apps designed for performance, usability, and real-world impact — from concept to App Store launch.",
-  },
-  {
-    icon: "🌐",
-    title: "Website Development",
-    description:
-      "High-performance websites and web applications built with modern frameworks, optimized for speed, SEO, and conversion.",
-  },
-  {
-    icon: "🎨",
-    title: "Product Design (UI/UX)",
-    description:
-      "User-centric design that turns complex workflows into intuitive, beautiful interfaces. From wireframes to pixel-perfect prototypes.",
+      "Decentralized applications (dApps), smart contracts, custom tokens, DeFi platforms, and Web3 solutions built to establish digital trust and scale cryptographically.",
   },
   {
     icon: "🥽",
-    title: "AR/VR Development",
+    title: "Immersive VR/AR/MR",
     description:
-      "Immersive augmented and virtual reality experiences for training, product visualization, gaming, and interactive storytelling.",
+      "Virtual and augmented reality simulations, spatial computing, interactive games, digital twins, and industrial IoT solutions built for engagement and training.",
   },
   {
-    icon: "🤖",
-    title: "AI & Emerging Tech",
+    icon: "💻",
+    title: "Custom Software & SaaS",
     description:
-      "Smart automation, machine learning models, and AI-powered features that give your product a competitive edge in the market.",
+      "High-performance custom software, enterprise platforms, scalable SaaS architectures, SAP integrations, and mobile apps designed to run business operations seamlessly.",
+  },
+  {
+    icon: "☁️",
+    title: "Cloud & DevOps",
+    description:
+      "Resilient cloud architecture (AWS, GCP, Azure), automated CI/CD pipelines, Kubernetes container orchestration, DevOps engineering, and data engineering.",
+  },
+  {
+    icon: "🎨",
+    title: "UI/UX & Web3 Marketing",
+    description:
+      "User-centric product designs, interactive prototypes, customer experience (CX) frameworks, and conversion-optimized digital marketing campaigns.",
   },
 ];
 

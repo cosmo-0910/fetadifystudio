@@ -1,10 +1,9 @@
 const steps = [
-  { title: "Discovery & Strategy", desc: "We dive deep into your goals, audience, and requirements to define a clear roadmap." },
-  { title: "Wireframing & Design", desc: "Interactive prototypes and polished UI/UX designs before a single line of code." },
-  { title: "Development", desc: "Agile sprints with regular demos — you see progress every week, not just at the end." },
-  { title: "QA & Testing", desc: "Comprehensive testing across devices, browsers, and edge cases for a bulletproof launch." },
-  { title: "Deployment", desc: "Smooth release to production with CI/CD pipelines, monitoring, and rollback plans." },
-  { title: "Support & Growth", desc: "Post-launch maintenance, analytics, and iterative improvements to keep you ahead." },
+  { title: "Discovery & Alignment", desc: "We conduct deep discovery sessions to align on business objectives, user personas, and technical requirements, creating a solid roadmap." },
+  { title: "Technical Strategy", desc: "Architecting the technical ecosystem, outlining APIs, database schemas, cloud infrastructure, security guidelines, and sprint timelines." },
+  { title: "High-Fidelity Design", desc: "Designing user journeys, custom design systems, and fully interactive prototypes so you can experience the product before coding begins." },
+  { title: "Modular Build", desc: "Executing agile, test-driven development cycles with weekly demos. We construct components modularly for maximum quality and speed." },
+  { title: "Launch & Scale", desc: "Deploying via automated pipelines, setting up analytics, and continuously scaling infrastructure to support growth and active monitoring." },
 ];
 
 export function ProcessSection() {
