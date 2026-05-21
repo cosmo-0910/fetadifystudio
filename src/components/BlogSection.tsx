@@ -8,7 +8,7 @@ const blogPosts = [
     readTime: "8 min read",
   },
   {
-    date: "Apr 15, 2026",
+    date: "Apr 16, 2026",
     category: "AR/VR",
     title: "How AR Is Transforming Retail: 5 Real-World Use Cases",
     excerpt:
